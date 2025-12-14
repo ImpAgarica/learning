@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+:root {
+    --vaporwave-pink: #ff71ce;
+    --vaporwave-cyan: #01cdfe;
+    --vaporwave-mint: #05ffa1;
+    --vaporwave-purple: #b967ff;
+}
+
+/* Background & Global Config */
+                html, body { height: 100%; }
+                body {
+                        margin: 0;
+                        min-height: 100%;
+                        background-color: rgb(255, 255, 255);
+                        background-image: url('images/curse_no_text.webp');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-attachment: fixed;
+                        color: whitesmoke;
+                        font-family: "Silkscreen", sans-serif;
+                        text-align: center;
+                }
+                body::before {
+                        content: "";
+                        position: fixed;
+                        inset: 0;
+                        background: rgba(0, 0, 0, 0.15);
+                        pointer-events: none;
+                }
+
+/* Pre text config */
+                pre {
+                        font-family: "Silkscreen", sans-serif;
+                        -webkit-text-stroke: 0.5px #ff69b4;
+                        text-stroke: 0.5px #ff69b4;
+                        paint-order: stroke fill;
+                }
+
+/* Links config */
+                a {
+                        color:aliceblue
+                }
+                a:hover {
+                        color: lightblue;
+                }
+                a:visited {
+                        color: palevioletred;
+                }
+
+/* Headings */
+                h1, h2 {
+                        -webkit-text-stroke: 0.5px #ff69b4;
+                        text-stroke: 0.5px #ff69b4;
+                        paint-order: stroke fill;
+                }
+
+/* Paragraphs */
+                p {
+                        -webkit-text-stroke: 0.5px #ff69b4;
+                        text-stroke: 0.5px #ff69b4;
+                        paint-order: stroke fill;
+                }
+
+/* Social Grid */
+                .social-grid {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        gap: 30px;
+                        max-width: 300px;
+                        margin: 0 auto;
+                        padding: 20px;
+                }
+                .social-link {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-decoration: none;
+                        transition: transform 0.3s ease;
+                }
+                .social-link:hover {
+                        transform: scale(1.1);
+                        text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4;
+                }
+                .social-link img {
+                        width: 50px;
+                        height: 50px;
+                        margin-bottom: 10px;
+                }
+                .social-link p {
+                        margin: 0;
+                        color: whitesmoke;
+                }
+
+/* Custom Music Player */
+                .custom-player {
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        z-index: 100;
+                        padding: 6px;
+                        border: 1px solid var(--vaporwave-purple);
+                        background: rgba(0, 0, 0, 0.7);
+                        box-shadow: 0 0 20px var(--vaporwave-pink), inset 0 0 30px rgba(255, 113, 206, 0.1);
+                }
+                .player-song-name {
+                        margin: 0;
+                        color: whitesmoke;
+                        max-width: 120px;
+                        font-size: 10px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        -webkit-text-stroke: 1px #000;
+                        text-stroke: 1px #000;
+                        paint-order: stroke fill;
+                }
+                .player-song-name:hover {
+                        text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff69b4;
+                }
+                .play-btn {
+                        background: rgba(185, 103, 255, 0.1);
+                        border: 1px solid var(--vaporwave-purple);
+                        color: whitesmoke;
+                        font-size: 12px;
+                        padding: 4px 6px;
+                        cursor: pointer;
+                        image-rendering: pixelated;
+                        image-rendering: crisp-edges;
+                        transition: all 0.2s ease;
+                }
+                .play-btn:hover {
+                        background: rgba(255, 113, 206, 0.2);
+                        color: var(--vaporwave-mint);
+                        box-shadow: 0 0 15px var(--vaporwave-pink);
+                        border-color: var(--vaporwave-pink);
+                }
+                .play-btn.playing {
+                        background: rgba(255, 113, 206, 0.2);
+                        box-shadow: 0 0 15px var(--vaporwave-pink);
+                }
+                #visualizerCanvas {
+                        border: 1px solid var(--vaporwave-cyan);
+                        background: #000;
+                        width: 100px;
+                        height: 40px;
+                        image-rendering: pixelated;
+                        filter: drop-shadow(0 0 10px var(--vaporwave-pink));
+                }
+                .player-gif {
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid var(--vaporwave-cyan);
+                        image-rendering: pixelated;
+                        filter: drop-shadow(0 0 10px var(--vaporwave-pink));
+                }

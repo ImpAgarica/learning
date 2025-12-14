@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang= "en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Agarica">
+        <meta name="description" content="Agarica's cute collection of learning.">
+        <title> Aggy's Page</title>
+        <link rel="icon" href="images/Bwury_pink.gif" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <!-- Custom Music Player -->
+        <div class="custom-player">
+            <p class="player-song-name">Shi Ni Itaru Koi </p>
+            <button class="play-btn" id="playBtn">▶</button>
+            <img id="playerGif" src="images/bury_pink_tunes.gif" alt="Player animation" class="player-gif">
+            <audio id="audioPlayer" autoplay>
+                <source src="images/Shi_ni_Itaru_Koi.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <h1>Agarica's cute Zone</h1>
+        <pre>I may be a stupid idiot with mental issues and a horrific academic record, 
+            but I still want to share all the things I've turned up researching and all the things I'm interested in.</pre>
+
+<br><br>
+
+        <img src="images/Bwury_pink.gif" alt="A nice cute pink blob" width="150" height="100">
+
+<br><br>
+        <p>  Be still, O soul, with rapture ever rife! <br>
+            O mouth, with the childish smile! Far more than Life, <br>
+            The subtle bonds of Death around us twine.  <br>
+            Let—let my heart, the wine of falsehood drink,  <br>
+            And dream-like, deep within your fair eyes sink,  <br>
+            And in the shade of thy lashes long recline!<br>
+        </p>
+<br><br>
+        <h2> Social </h2>
+        <p>This is a collection of my social links.
+            <br>Feel free to add me! Don't be shy!
+        </p>
+
+        <div class="social-grid">
+            <a href="https://twitter.com/AgaricaAlter" class="social-link">
+                <img src="icons/icon_mendako.webp" alt="Twitter">
+                <p>X</p>
+            </a>
+            <a href="https://steamcommunity.com/id/agarica/" class="social-link">
+                <img src="icons/icon_desktop_game.webp" alt="Steam">
+                <p>Steam</p>
+            </a>
+            <a href="https://open.spotify.com/user/22ujnis4nxxrkartp27snmvay" class="social-link">
+                <img src="icons/icon_pien_cat.webp" alt="Spotify">
+                <p>Spotify</p>
+            </a>
+            <a href="https://www.youtube.com/@agarica" class="social-link">
+                <img src="icons/icon_heart.webp" alt="YouTube">
+                <p>YouTube</p>
+            </a>
+            <a href="https://myanimelist.net/profile/Agarica" class="social-link">
+                <img src="icons/icon_desktop_text.webp" alt="MAL">
+                <p>MAL</p>
+            </a>
+        </div>
+
+        <br><br><br><br><br><br><br>
+        <h3> Under Construction </h3>
+        <img src="images/nier_gif.gif" alt="My Beloved Wife" width="370" height="624">
+
+        <script>
+        const playBtn = document.getElementById('playBtn');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        // Set button to playing state on page load
+        playBtn.textContent = '⏸';
+        playBtn.classList.add('playing');
+
+        playBtn.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playBtn.textContent = '⏸';
+                playBtn.classList.add('playing');
+            } else {
+                audioPlayer.pause();
+                playBtn.textContent = '▶';
+                playBtn.classList.remove('playing');
+            }
+        });
+
+        audioPlayer.addEventListener('ended', () => {
+            playBtn.textContent = '▶';
+            playBtn.classList.remove('playing');
+        });
+        </script>
+
+    </body>
+
+
+</html>
